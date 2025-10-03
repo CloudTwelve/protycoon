@@ -1,0 +1,111 @@
+:root {
+    --lavender-blush: #f6e8eaff; /* background */
+    --bright-pink-crayola: #ef626cff; /* accent */
+    --licorice: #22181cff; /* text */
+    --jet: #312f2fff; /* lighter text */
+    --tiffany-blue: #84dccfff; /* accent */
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--lavender-blush);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    bottom: 50px;
+}
+
+main * {
+    font-family: "Mochiy Pop One"; 
+    text-align: center;
+    margin: 10px;
+}
+
+.big-text {
+    color: var(--licorice);
+    font-size: 6rem;
+}
+
+.smaller-text {
+    color: var(--jet);
+    font-size: 2.5rem;
+}
+
+.tycoon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.dropper {
+    width: 206px;
+    height: 258px;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.conveyor {
+    position: absolute;
+    background-color: var(--jet);
+    height: 40px;
+    width: 100vw;
+    bottom: 0px;
+}
+
+.block {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--bright-pink-crayola);
+    z-index: -1;
+}
+
+.dropped {
+    left: 180px;
+    animation: drop 1.5s infinite ease-in;
+}
+
+.conveyed {
+    left: 70px;
+    bottom: 40px;
+    animation: convey 6s infinite linear;
+}
+
+.conv-cont > :nth-child(2) {
+    animation-delay: 2s;
+}
+
+.conv-cont > :nth-child(3) {
+    animation-delay: 3s;
+}
+
+.conv-cont > :nth-child(4) {
+    animation-delay: 4s;
+}
+
+.conv-cont > :nth-child(5) {
+    animation-delay: 5s;
+}
+
+@keyframes drop {
+    from {bottom: 230px;}
+    to {bottom: 0;}
+}
+
+@keyframes convey {
+    from {left: 70px;}
+    to {left: 100vw;}
+}
