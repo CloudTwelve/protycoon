@@ -23,6 +23,19 @@ body {
     padding: 0;
 }
 
+nav {
+    font-family: "Mochiy Pop One";
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
 main {
     position: relative;
     bottom: 50px;
@@ -109,3 +122,4 @@ main * {
     from {left: 70px;}
     to {left: 100vw;}
 }
+

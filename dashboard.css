@@ -1,0 +1,304 @@
+:root {
+    --lavender-blush: #f6e8eaff; /* background */
+    --bright-pink-crayola: #ef626cff; /* accent */
+    --licorice: #22181cff; /* text */
+    --jet: #312f2fff; /* lighter text */
+    --tiffany-blue: #84dccfff; /* accent */
+}
+
+* {
+    font-family: "Mochiy Pop One";
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: "Mochiy Pop One";
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 80px;
+}
+
+body {
+    background-color: var(--lavender-blush);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tycoon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.dropper {
+    width: 206px;
+    height: 258px;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.conveyor {
+    position: absolute;
+    background-color: var(--jet);
+    height: 40px;
+    width: 100vw;
+    bottom: 0px;
+}
+
+.block {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--bright-pink-crayola);
+    z-index: -1;
+}
+
+.dropped {
+    left: 180px;
+    animation: drop 1.5s infinite ease-in;
+}
+
+.conveyed {
+    left: 70px;
+    bottom: 40px;
+    animation: convey 6s infinite linear;
+}
+
+.conv-cont > :nth-child(2) {
+    animation-delay: 2s;
+}
+
+.conv-cont > :nth-child(3) {
+    animation-delay: 3s;
+}
+
+.conv-cont > :nth-child(4) {
+    animation-delay: 4s;
+}
+
+.conv-cont > :nth-child(5) {
+    animation-delay: 5s;
+}
+
+@keyframes drop {
+    from {bottom: 230px;}
+    to {bottom: 0;}
+}
+
+@keyframes convey {
+    from {left: 70px;}
+    to {left: 100vw;}
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.timer * {
+    font-size: 12rem;
+    color: black;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swap * {
+    margin: 0 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.standard {
+    font-family: "Outfit";
+}
+
+.x {
+    position: absolute;
+    width: 25px;
+    height: auto;
+    top: 20px;
+    right: 20px;
+    font-family: "Arial" !important;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: 400px;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    background-color: var(--bright-pink-crayola);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: solid;
+    border-color: rgba(1,1,1,10%);
+    border-width: 4px;
+}
+
+.lightbox * {
+    margin: 5px;
+    font-family: "Mochiy Pop One";
+}
+
+.scrollable {
+    overflow: scroll;
+}
+
+.lb-bottom {
+    background-color: var(--lavender-blush);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border-radius: 20px;
+    height: 300px;
+    padding: 10px;
+    border: none;
+}
+
+input {
+    width: 20px;
+    margin: 0 !important;
+}
+
+.set-btn {
+    background-color: rgba(1, 1, 1, 10%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+p {
+    display: inline;
+    margin: 0 !important;
+}
+
+a {
+    font-weight: 800;
+    color: black;
+}
+
+.button-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-cont button {
+    display: inline;
+    margin: 10px;
+}
+
+.button-cont *, .swap * {
+    background-color: transparent;
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50%;
+}
+
+.button-cont * {
+    width: 70px;
+    height: 70px;
+}
+
+.page-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    width: 75px;
+    height: 75px;
+    border-radius: calc((75 / 2) * 1px);
+    transition: width 1s ease-in-out;
+}
+
+#hide {
+    max-width: 0%;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 1s ease-in-out;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.page-btn:hover #hide {
+    max-width: 100%;
+}
+
+.page-btn:hover {
+    width: 230px;
+    border-radius: calc((75 / 2) * 1px);
+}
+
+.coins {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bright-pink-crayola);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.coins img {
+    width: 30px;
+    height: 30px;
+}
+
+.nums {
+    width: 100px;
+    background-color: var(--lavender-blush);
+    border-radius: 10px;
+    padding: 5px;
+}

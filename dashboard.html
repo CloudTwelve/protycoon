@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://kit.fontawesome.com/dc2644d431.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <main>
+        <div class="timer-cont">
+                <div class="timer">
+                    <div class="hrs">
+                        00
+                    </div>
+                    <div class="colon" id="c-hrs">
+                        :
+                    </div>
+                    <div class="mins">
+                        00
+                    </div>
+                    <div class="colon" id="c-mins">
+                        :
+                    </div>
+                    <div class="secs">
+                        00
+                    </div>
+                </div>
+                <div class="swap">
+                    <button class="restart">
+                        <i class="fa-solid fa-arrow-rotate-right fa-4x"></i>
+                    </button>
+                    <button class="settings">
+                        <i class="fa-solid fa-ellipsis fa-4x"></i>
+                    </button>
+                    <button class="play-pause">
+                        <i id="play-pause-icon" class="fa-solid fa-play fa-4x"></i>
+                    </button>
+                </div>    
+        </div>
+    </main>
+    <div class="coins">
+        <img src="images/coin.png">
+        <div class="nums"></div>
+    </div>
+    <div class="lightbox">
+            <div class="x">
+                <i class="fa-solid fa-xmark fa-lg"></i>
+            </div>
+            <div class="lb-top">
+                <h1 class="standard">
+                    Settings
+                </h1>
+            </div>
+            <div class="scrollable lb-bottom">
+                <h2 class="standard">
+                    Timer
+                </h2>
+                <div>
+                    <label class="standard" for="timer">Set timer:</label>
+                    <input type="text" id="hrs" name="hrs">
+                    <p class="standard">:</p>
+                    <input type="text" id="mins" name="mins">
+                    <p class="standard">:</p>
+                    <input type="text" id="secs" name="secs">
+                    <br>
+                    <button class="set-btn save-time">
+                    Save
+                    </button>
+                    <br>
+                    <label for="sizes" class="standard">Timer Size:</label>
+                    <select id="sizes" name="sizes" class="set-btn standard">
+                        <option value="">[Select]</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="huge">Huge</option>
+                    </select>
+                </div>
+                <h2 class="standard danger">
+                    Danger Zone
+                </h2>
+                <button class="set-btn danger-btn">Clear Site Data</button>
+            </div>
+        </div>
+    <div class="tycoon">
+            <img src="images/dropper.png" class="dropper">
+            <div class="block dropped"></div>
+            <div class="conv-cont">
+                <div class="block conveyed"></div>
+                <div class="block conveyed"></div>
+                <div class="block conveyed"></div>
+                <div class="block conveyed"></div>
+                <div class="block conveyed"></div>
+            </div>
+            <div class="conveyor"></div>
+    </div>
+</body>
+</html>
